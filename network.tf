@@ -2,7 +2,7 @@ resource "azurerm_virtual_network" "terra" {
   name                = "terrabite-vnet"
   location            = azurerm_resource_group.terra.location
   resource_group_name = azurerm_resource_group.terra.name
-  address_space       = ["10.0.0.0/16"]
+  address_spac       = ["10.0.0.0/16"]
 }
 
 resource "azurerm_subnet" "terra" {
