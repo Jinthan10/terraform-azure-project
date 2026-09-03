@@ -50,4 +50,3 @@ resource "azurerm_windows_virtual_machine" "windows_vm" {
     version   = "latest"
   }
 }
-this_is_invalid = true
