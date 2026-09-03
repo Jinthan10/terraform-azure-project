@@ -3,6 +3,6 @@ terraform {
     resource_group_name  = "rg-terraform-state"
     storage_account_name = "terraf"
     container_name       = "tfstate"
-    key                  = "terraform.tfstate"
+    key                  = "tfsat"
   }
 }
