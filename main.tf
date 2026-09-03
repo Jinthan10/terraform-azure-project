@@ -4,12 +4,12 @@ resource "azurerm_linux_virtual_machine" "linux_vm" {
   location            = azurerm_resource_group.terra.location
   size                = "Standard_B1ms"
 
-  admin_username                  = "azureadmin"
-  admin_password                  = "admin@1234"
+  admin_username                  = var.admin_username
+  admin_password                  = var.admin_password
   disable_password_authentication = false
 
   network_interface_ids = [
-    azurerm_network_interface.private_id.id
+    azurerm_network_interface.linux_vm.id
   ]
 
   os_disk {
@@ -31,11 +31,11 @@ resource "azurerm_windows_virtual_machine" "windows_vm" {
   location            = azurerm_resource_group.terra.location
   size                = "Standard_B1ms"
 
-  admin_username = "azureadmin"
-  admin_password = "admin@1234"
+  admin_username = var.admin_username
+  admin_password = var.admin_password
 
   network_interface_ids = [
-    azurerm_network_interface.vm2.id
+    azurerm_network_interface.windows_vm.id
   ]
 
   os_disk {
