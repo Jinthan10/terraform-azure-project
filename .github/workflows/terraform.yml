@@ -42,4 +42,4 @@ jobs:
       - name: Terraform Plan
         env:
           TF_VAR_admin_password: ${{ secrets.AZURE_VM_ADMIN_PASSWORD }}
-        run: terraform plan
+        run: terraform plan -out=tfplan
