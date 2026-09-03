@@ -46,4 +46,4 @@ jobs:
       - name: Terraform Apply
         env:
           TF_VAR_admin_password: ${{ secrets.AZURE_VM_ADMIN_PASSWORD }}
-        run: terraform apply -out=tfplan
+        run: terraform apply -auto-approve tfplan
